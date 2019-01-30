@@ -1,9 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import Enzyme, { shallow } from 'enzyme';
+import EnzymeAdapter from 'enzyme-adapter-react-16';
 import App from './App';
 
+import { findByTestAttr } from '../test/testUtils';
+
+Enzyme.configure({ adapter: new EnzymeAdapter() });
+
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+  const div = shallow(<App />);
+  const component = findByTestAttr(div, 'component-main-div');
+  expect(component.length).toBe(1);
 });
