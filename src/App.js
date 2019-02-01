@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import MealList from './components/MealList/MealList';
-import ImageTallyItem from './components/ImageTallyItem/ImageTallyItem';
+import ImageTallyContainer from './components/ImageTallyContainer/ImageTallyContainer';
 import iconWater from './assets/water.svg';
+import iconVeg from './assets/veg.svg';
+import iconBed from './assets/bed.svg';
 import './App.css';
+
+
 
 class App extends Component {
   render() {
-
-    const iconClicker = (id) => {
-      console.log(id);
-    }
     const list = [
        {
           title:'Breakfast',
@@ -31,14 +31,9 @@ class App extends Component {
     return (
       <div data-test='component-main-div' className='App'>
         <MealList list={list} />
-        <ImageTallyItem icon={iconWater}
-          isSelected={true}
-          id='icon-water-1'
-          iconClicker={iconClicker} />
-          <ImageTallyItem icon={iconWater}
-            isSelected={false}
-            id='icon-water-2'
-            iconClicker={iconClicker} />
+        <ImageTallyContainer type="water" icon={iconWater} amount={7}/>
+        <ImageTallyContainer type="veg" icon={iconVeg} amount={5}/>
+        <ImageTallyContainer type="bed" icon={iconBed} amount={8}/>
       </div>
     );
   }
