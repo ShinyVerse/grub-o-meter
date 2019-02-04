@@ -1,4 +1,7 @@
 /* BASE */
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+}
 ul {
   list-style-type: none;
   text-decoration: none;
@@ -7,8 +10,19 @@ ul {
 /* INPUT */
 
 .form-user-input {
+  font-size: 0.7em;
   border: black solid 1px;
-  
+  outline: none;
+  border-radius: 2px;
+  width: 80%;
+  min-height: 40px;
+  display: block;
+  margin: 1px 0px 5px;
+  word-wrap: break-word;
+}
+
+.form-user-input:focus {
+  border: #5edd57 solid 1px;
 }
 
 /* ICONS */
@@ -17,10 +31,27 @@ ul {
 }
 
 .icon {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   background: #21a8ff;
-  padding: 3px;
-  border-radius: 15%;
-  margin-right: 5px;
+  padding: 2.5px;
+  border-radius: 5%;
+  margin: 1px;
+}
+
+.icon-container {
+  margin: auto;
+  margin-top: 2px;
+  padding: 0px;
+    width: 90%;
+}
+
+.icon-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: #6a6a6a solid 1px;
+  margin: auto;
+  padding: 4px;
+  margin-bottom: 10px;
 }

@@ -4,8 +4,8 @@ const Input = (props) => {
   return (
     <div data-test='component-input'>
       <label className='label-event-title'>{props.title}
-        <input className='form-user-input'>
-        </input>
+        <textarea className='form-user-input'>
+        </textarea>
       </label>
     </div>
   )

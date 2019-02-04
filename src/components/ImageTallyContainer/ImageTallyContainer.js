@@ -38,11 +38,17 @@ class ImageTallyContainer extends Component {
 
   render() {
     return (
-      <ul data-test='component-icon-tally' >
-        {this.state.tally.map(item => {
-          return item
-        })}
-      </ul>
+      <div className='icon-container'>
+        <label className='label-item-title'>
+          {this.state.title}
+          <ul data-test='component-icon-tally'
+              className='icon-list'>
+            {this.state.tally.map(item => {
+              return item
+            })}
+          </ul>
+        </label>
+      </div>
     );
   }
 }
