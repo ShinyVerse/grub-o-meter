@@ -1,7 +1,7 @@
 import React from 'react';
 import Input from '../Input/Input';
 
-const MealList = (props) => {
+const EventList = (props) => {
   return (
     <ul data-test='component-meal-list'>
       {props.list.map(item => {
@@ -15,4 +15,4 @@ const MealList = (props) => {
   )
 }
 
-export default MealList;
+export default EventList;

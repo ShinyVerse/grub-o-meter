@@ -23,7 +23,7 @@ test('renders without crashing', () => {
 
 test('correctly labels input field', () => {
   const wrapper = setup();
-  const input = findByTestAttr(wrapper, 'label-meal-title', 'className');
+  const input = findByTestAttr(wrapper, 'label-event-title', 'className');
   expect(input.text()).toContain(defaultProps.title);
 });
 

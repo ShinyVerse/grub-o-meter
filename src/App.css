@@ -1,3 +1,17 @@
+/* BASE */
+ul {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+/* INPUT */
+
+.form-user-input {
+  border: black solid 1px;
+  
+}
+
+/* ICONS */
 .unselected {
   filter: grayscale(100%);
 }

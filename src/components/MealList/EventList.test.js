@@ -1,7 +1,7 @@
 import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
-import MealList from './MealList';
+import EventList from './EventList';
 
 import { findByTestAttr } from '../../../test/testUtils';
 
@@ -21,17 +21,17 @@ const defaultProps = [
 
 const setup = (props=[]) => {
   const setupProps = [...defaultProps, ...props]
-  return shallow(<MealList list={setupProps} />)
+  return shallow(<EventList list={setupProps} />)
 }
 
 test('renders without crashing', () => {
   const wrapper = setup();
-  const mealList = findByTestAttr(wrapper, 'component-meal-list');
-  expect(mealList.length).toBe(1);
+  const eventList = findByTestAttr(wrapper, 'component-meal-list');
+  expect(eventList.length).toBe(1);
 })
 
 test('renders correct amount of list items to page', () => {
   const wrapper = setup();
-  const mealListItems = findByTestAttr(wrapper, 'meal-list-item');
-  expect(mealListItems.length).toBe(defaultProps.length);
+  const eventList = findByTestAttr(wrapper, 'meal-list-item');
+  expect(eventList.length).toBe(defaultProps.length);
 })
