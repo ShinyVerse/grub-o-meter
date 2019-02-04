@@ -5,4 +5,8 @@
 .icon {
   width: 60px;
   height: 60px;
+  background: #21a8ff;
+  padding: 3px;
+  border-radius: 15%;
+  margin-right: 5px;
 }

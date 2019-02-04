@@ -4,6 +4,8 @@ import ImageTallyContainer from './components/ImageTallyContainer/ImageTallyCont
 import iconWater from './assets/water.svg';
 import iconVeg from './assets/veg.svg';
 import iconBed from './assets/bed.svg';
+import iconExercise from './assets/exercise.svg';
+import iconGoal from './assets/achievement.svg';
 import listItems from './assets/list.json';
 import './App.css';
 
@@ -15,9 +17,11 @@ class App extends Component {
     return (
       <div data-test='component-main-div' className='App'>
         <MealList list={list} />
-        <ImageTallyContainer type="water" icon={iconWater} amount={7}/>
-        <ImageTallyContainer type="veg" icon={iconVeg} amount={5}/>
-        <ImageTallyContainer type="bed" icon={iconBed} amount={8}/>
+        <ImageTallyContainer type="water" icon={iconWater} amount={8}/>
+        <ImageTallyContainer type="veg" icon={iconVeg} amount={7}/>
+        <ImageTallyContainer type="bed" icon={iconBed} amount={10}/>
+        <ImageTallyContainer type="exercise" icon={iconExercise} amount={1}/>
+        <ImageTallyContainer type="goals" icon={iconGoal} amount={3}/>
       </div>
     );
   }
