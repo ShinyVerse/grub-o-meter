@@ -17,11 +17,13 @@ class App extends Component {
     return (
       <div data-test='component-main-div' className='App'>
         <EventList list={list} />
-        <ImageTallyContainer title='Glasses of Water' type="water" icon={iconWater} amount={8}/>
-        <ImageTallyContainer title='Fruit and Veg' type="veg" icon={iconVeg} amount={7}/>
-        <ImageTallyContainer title='Hours of Sleep' type="bed" icon={iconBed} amount={10}/>
-        <ImageTallyContainer title='Exercised?' type="exercise" icon={iconExercise} amount={1}/>
-        <ImageTallyContainer title='Achievements Today' type="goals" icon={iconGoal} amount={3}/>
+        <div className='tally-master-container'>
+          <ImageTallyContainer title='Glasses of Water' type="water" icon={iconWater} amount={8}/>
+          <ImageTallyContainer title='Fruit and Veg' type="veg" icon={iconVeg} amount={7}/>
+          <ImageTallyContainer title='Hours of Sleep' type="bed" icon={iconBed} amount={10}/>
+          <ImageTallyContainer title='Exercised?' type="exercise" icon={iconExercise} amount={1}/>
+          <ImageTallyContainer title='Achievements Today' type="goals" icon={iconGoal} amount={3}/>
+        </div>
       </div>
     );
   }

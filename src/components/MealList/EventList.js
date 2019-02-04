@@ -3,7 +3,7 @@ import Input from '../Input/Input';
 
 const EventList = (props) => {
   return (
-    <ul data-test='component-meal-list'>
+    <ul data-test='component-meal-list' >
       {props.list.map(item => {
         return (
           <li key={item.id} data-test="meal-list-item">
