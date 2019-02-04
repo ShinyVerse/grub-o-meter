@@ -11,7 +11,7 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
 const defaultProps = {
   icon: icon,
   id: 'icon-water-1',
-  isSelected: false
+  style: 'icon unselected'
 };
 
 const setup = (props={}) => {
@@ -25,20 +25,14 @@ test('renders without crashing', () => {
   expect(tallyItem.length).toBe(1);
 });
 
-test('class to greyscale (unselected) icon when isSelected = false', () => {
+test('renders as unselected icon (greyscale)', () => {
   const wrapper = setup();
   const tallyItem = findByTestAttr(wrapper, 'component-tally-item');
-  expect(tallyItem.hasClass('unselected')).toBe(true)
+  expect(tallyItem.hasClass('unselected')).toBe(true);
 });
 
-test('class unselected when isSelected false', () => {
-  const wrapper = setup();
+test('renders a selected icon (colour)', () => {
+  const wrapper = setup({ style: icon });
   const tallyItem = findByTestAttr(wrapper, 'component-tally-item');
-  expect(tallyItem.hasClass('unselected')).toBe(true)
-});
-
-test('does not have unselected when isSelected true', () => {
-  const wrapper = setup({isSelected: true});
-  const tallyItem = findByTestAttr(wrapper, 'component-tally-item');
-  expect(tallyItem.hasClass('unselected')).toBe(false)
+  expect(tallyItem.hasClass('unselected')).toBe(false);
 });
