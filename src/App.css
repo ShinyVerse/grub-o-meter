@@ -50,7 +50,6 @@ ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  border: #6a6a6a solid 1px;
   margin: auto;
   padding: 4px;
   margin-bottom: 10px;
@@ -102,4 +101,48 @@ ul {
     clear: both;
     margin: auto;
   }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    overflow: hidden;
+  }
+  div.App {
+    display: flex;
+  }
+
+  .form-user-input {
+    min-width: 200px;
+    min-height: 60px;
+    margin: 5px;
+  }
+
+  .tally-master-container {
+    width: 80%;
+    margin: auto;
+
+  }
+
+  .eventlist-container {
+    background: rgb(172, 206, 215);
+    padding: 3px;
+    border-radius: 1px;
+  }
+  .icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .icon-container {
+    width: 45%;
+    display: block;
+    float: left;
+    margin: 4px;
+  }
+
+  .icon-list {
+    border-radius: 10px;
+    border: #6a6a6a solid 1.5px;
+  }
+
 }
