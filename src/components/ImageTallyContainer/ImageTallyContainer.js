@@ -8,11 +8,9 @@ class ImageTallyContainer extends Component {
     }
 
   iconClicker = (e) => {
-    if (e.target.className === 'icon unselected') {
-      e.target.className = 'icon'
-    } else {
-      e.target.className = 'icon unselected'
-    }
+    e.target.className === 'icon unselected' ?
+      e.target.className = 'icon' :
+      e.target.className = 'icon unselected';
   }
 
   updateTallyState = (newState) => {
@@ -25,7 +23,7 @@ class ImageTallyContainer extends Component {
       tallyToReturn.push( <ImageTallyItem
         key={"icon" + this.state.type + i}
         data-test='tally-icon'
-        className='icon'
+        style='icon unselected'
         id={"icon" + this.state.type + i}
         iconClicker={this.iconClicker.bind()}
         icon={this.state.icon}
