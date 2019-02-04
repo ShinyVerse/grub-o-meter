@@ -151,3 +151,10 @@ ul {
   }
 
 }
+
+@media screen and (min-width: 1200px) {
+  .icon-container {
+    width: 80%;
+    margin-left: 50px;
+  }
+}
