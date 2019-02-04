@@ -10,7 +10,8 @@ ul {
 /* INPUT */
 
 .form-user-input {
-  font-size: 0.7em;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 0.8em;
   border: black solid 1px;
   outline: none;
   border-radius: 2px;
@@ -143,6 +144,10 @@ ul {
   .icon-list {
     border-radius: 10px;
     border: #6a6a6a solid 1.5px;
+  }
+
+  .form-user-input {
+    font-size: 1.1em;
   }
 
 }
