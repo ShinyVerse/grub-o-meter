@@ -7,7 +7,7 @@ const ImageTallyItem = (props) => {
       src={props.icon}
       onClick={(e) => {props.iconClicker(e)}}
       data-test='component-tally-item'
-      className={props.style} />
+      className={props.styleIcon} />
   )
 }
 

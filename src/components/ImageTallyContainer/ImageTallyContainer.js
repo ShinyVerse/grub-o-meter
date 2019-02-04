@@ -23,7 +23,7 @@ class ImageTallyContainer extends Component {
       tallyToReturn.push( <ImageTallyItem
         key={"icon" + this.state.type + i}
         data-test='tally-icon'
-        style='icon unselected'
+        styleIcon='icon unselected'
         id={"icon" + this.state.type + i}
         iconClicker={this.iconClicker.bind()}
         icon={this.state.icon}

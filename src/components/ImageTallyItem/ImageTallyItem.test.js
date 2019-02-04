@@ -11,7 +11,7 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
 const defaultProps = {
   icon: icon,
   id: 'icon-water-1',
-  style: 'icon unselected'
+  styleIcon: 'icon unselected'
 };
 
 const setup = (props={}) => {
@@ -32,7 +32,7 @@ test('renders as unselected icon (greyscale)', () => {
 });
 
 test('renders a selected icon (colour)', () => {
-  const wrapper = setup({ style: icon });
+  const wrapper = setup({ styleIcon: 'icon' });
   const tallyItem = findByTestAttr(wrapper, 'component-tally-item');
   expect(tallyItem.hasClass('unselected')).toBe(false);
 });
