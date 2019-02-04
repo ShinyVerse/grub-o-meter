@@ -13,9 +13,13 @@ import './App.css';
 
 class App extends Component {
   render() {
+    let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    let date  = new Date();
+    let today = date.toLocaleDateString('en-EU', options)
     const list = listItems
     return (
       <div data-test='component-main-div' className='App'>
+        <div id='date'>{today}</div>
         <EventList list={list} />
         <div className='tally-master-container'>
           <ImageTallyContainer title='Glasses of Water' type="water" icon={iconWater} amount={8}/>
@@ -23,6 +27,7 @@ class App extends Component {
           <ImageTallyContainer title='Exercised?' type="exercise" icon={iconExercise} amount={1}/>
           <ImageTallyContainer title='Achievements Today' type="goals" icon={iconGoal} amount={3}/>
           <ImageTallyContainer title='Hours of Sleep' type="bed" icon={iconBed} amount={10}/>
+
         </div>
       </div>
     );

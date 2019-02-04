@@ -1,4 +1,16 @@
 /* BASE */
+html {
+  margin-top: 12px;
+}
+
+#date {
+  float: right;
+  position: absolute;
+  top: 5px;
+  left: calc(50% - 78px);
+  font-size: 1.1em;
+}
+
 body {
   font-family: 'Roboto Condensed', sans-serif;
 }
@@ -156,5 +168,10 @@ ul {
   .icon-container {
     width: 80%;
     margin-left: 50px;
+  }
+
+  #date {
+    font-size: 1.3em;
+    left: calc(50% - 70px);
   }
 }
