@@ -1,0 +1,22 @@
+[
+  {
+    "title":"Goal of Today",
+    "id": "goal"
+  },
+  {
+   "title": "Breakfast",
+   "id": "meal1"
+ },
+ {
+   "title": "Lunch",
+   "id": "meal2"
+ },
+ {
+   "title":"Dinner",
+   "id": "meal3"
+ },
+ {
+   "title":"Snacks",
+   "id": "meal4"
+ }
+]

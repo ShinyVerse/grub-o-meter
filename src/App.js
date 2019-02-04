@@ -4,30 +4,14 @@ import ImageTallyContainer from './components/ImageTallyContainer/ImageTallyCont
 import iconWater from './assets/water.svg';
 import iconVeg from './assets/veg.svg';
 import iconBed from './assets/bed.svg';
+import listItems from './assets/list.json';
 import './App.css';
 
 
 
 class App extends Component {
   render() {
-    const list = [
-       {
-          title:'Breakfast',
-          id: 'meal1'
-        },
-        {
-          title:'Lunch',
-          id: 'meal2'
-        },
-        {
-          title:'Dinner',
-          id: 'meal3'
-        },
-        {
-          title:'Snacks',
-          id: 'meal4'
-        },
-      ]
+    const list = listItems
     return (
       <div data-test='component-main-div' className='App'>
         <MealList list={list} />
