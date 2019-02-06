@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { mount } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 import Input from './Input';
 
@@ -12,7 +12,7 @@ const defaultProps = { title: 'MealTimeTitle' }
 
 const setup = (props={}) => {
   const setupProps = { ...defaultProps, ...props }
-  return shallow(<Input {...setupProps}/>);
+  return mount(<Input {...setupProps}/>);
 };
 
 test('renders without crashing', () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { mount } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 import EventList from './EventList';
 
@@ -21,7 +21,7 @@ const defaultProps = [
 
 const setup = (props=[]) => {
   const setupProps = [...defaultProps, ...props]
-  return shallow(<EventList list={setupProps} />)
+  return mount(<EventList list={setupProps} />)
 }
 
 test('renders without crashing', () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { mount } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 import ImageTallyItem from './ImageTallyItem';
 import icon from '../../assets/water.svg';
@@ -16,7 +16,7 @@ const defaultProps = {
 
 const setup = (props={}) => {
   const setupProps = { ...defaultProps, ...props }
-  return shallow(<ImageTallyItem {...setupProps}/>);
+  return mount(<ImageTallyItem {...setupProps}/>);
 };
 
 test('renders without crashing', () => {
